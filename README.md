@@ -9,7 +9,7 @@ pip install asciifolder
 ### Usage
 
 ```python
->>> asciifolder "Python/Lib/concurent"
+>>> folder2ascii "Python/Lib/concurent"
 
 >>>
 concurrent/
