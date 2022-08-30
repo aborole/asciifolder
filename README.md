@@ -29,7 +29,7 @@ concurrent/
 ```
 
 ```python
-from asciifolder import folde2ascii
+from asciifolder import folder2ascii
 
 for line in folder2ascii(path):
     print(line)
