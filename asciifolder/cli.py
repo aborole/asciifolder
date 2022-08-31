@@ -5,7 +5,7 @@ import os
 import sys
 
 from natsort import natsorted
-
+from pathlib import Path
 
 def folder2ascii(path, prefix=''):
     """ converts folder structure to list of strings
@@ -83,8 +83,10 @@ def folder2ascii(path, prefix=''):
             
 
 def main(path):
-    for line in folder2ascii(path):
-        print(line)
-
+    with Path(Path(path) / "output.txt").open("w+", encoding="UTF-8") as output:
+        for line in folder2ascii(path):
+            print(line)
+            output.write(line + "\n")
+        
 if __name__ == '__main__':
     main(sys.argv[1])
